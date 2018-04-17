@@ -1,0 +1,44 @@
+<!--Author: Valerie Schultz
+	This is the first page that the user will see that prompts them to enter their ID and password to log in to see the content.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> RAC MockUp Registration Page </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	</head>
+			<!--Linking this page to the CSS style sheet: mockUp.css-->
+		<link rel="stylesheet" type="text/css" href="mockUp.css" />
+		<body>
+			<p>
+				<img src = "images/UMBCretrievers.jpg"  alt = "UMBC retriever" height="100"/>				
+			</p>
+			<div class = "center">
+				<h1>Welcome to the RAC!</h1>
+				<p>
+					Please Log-In To Reserve Equipment!
+				</p>
+				<p>
+					Please enter the requested information below:
+				</p>
+		<!--This will post to a database to allow the user to log in and go to Mary's Student's Home Page--> 
+				<form action = "https://swe.umbc.edu/~schultz4/is448/project/Registration.php" method = "post">
+					<label>
+						Student ID: <input type="text" name="idNum" size="25" />
+					</label>
+						<br /><br />
+					<label>
+						Password: <input type="text" name="pass" size="25" />
+					</label>
+					<br /><br />
+					<label>
+						<input type="submit" id="submitButton" value="Submit request"/>
+					</label>
+						<br /><br />
+				</form>
+				<p>
+					<a href="https://swe.umbc.edu/~schultz4/is448/project/forgetPassword.html"> Forget password?</a>
+				</p>
+			</div>
+		</body>
+</html>
