@@ -25,7 +25,7 @@
 <h1 class = "name" > *Student Name* 's Home Page </h1>
 
 <div class = "menu">
-	<a class= "menu_link" href = "https://swe.umbc.edu/~mbrooks3/is448/project/studenthomepage.html">
+	<a class= "menu_link" href = "https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
 	My Page
 	</a>
 	<br /><br />
