@@ -55,7 +55,7 @@
 			?>
 			<div class = "center">
 				<p>
-					<a href="https://swe.umbc.edu/~schultz4/is448/project/Registration.html"> Next</a>
+					<a href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html"> Next</a>
 				</p>
 			</div>
 		<?php
