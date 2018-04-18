@@ -65,7 +65,7 @@ $SESSION['id'] = 'idNum';
 			?>
 			<div class = "center">
 				<p>
-					<a href="https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php"> Next</a>
+					<a href="https://swe.umbc.edu/~mbrooks3/is448/projectModifed/studenthomepage.php"> Next</a>
 				</p>
 			</div>
 			
