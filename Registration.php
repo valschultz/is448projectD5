@@ -4,7 +4,6 @@ $SESSION['id'] = 'idNum';
 ?>
 <!--Author: Valerie Schultz
 	This page is the check for the Registration.html page, so that the correct student id and password are entered, check against the database and confirmed to be correct.
-	TO do: CREATE SESSION VARIABLES
 	-->
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +65,7 @@ $SESSION['id'] = 'idNum';
 			?>
 			<div class = "center">
 				<p>
-					<a href="https://swe.umbc.edu/~mbrooks3/is448/project/studenthomepage.php"> Next</a>
+					<a href="https://swe.umbc.edu/~mbrooks3/is448/projectModifed/studenthomepage.php"> Next</a>
 				</p>
 			</div>
 			
