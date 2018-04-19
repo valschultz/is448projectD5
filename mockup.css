@@ -40,13 +40,18 @@ a.menu_link {
 .tips {
 	float: left;
 }
-.notes_top{clear: left;
-	padding-top:15pt;
+
+.notes_top {
+	clear: left;
+	padding-top: 15pt;
 	margin-left: 18%;
 }
-.notes{clear: left;
+
+.notes {
+	clear: left;
 	margin-left: 18%;
 }
+
 .home_page_headings {
 	font-size: 30px;
 }
@@ -89,7 +94,14 @@ a.menu_link {
 	border: 2px solid black;
 	background: gray;
 }
+
+.machine {
+	background: lightgray;
+	text-align: center;
+}
+
 /*Daily Schedule Page*/
+
 .equ_center {
 	padding: 60px;
 	font-size: 45px;
@@ -101,7 +113,6 @@ a.menu_link {
 .statement {
 	text-align: center;
 }
-
 
 .times {
 	text-align: center;
