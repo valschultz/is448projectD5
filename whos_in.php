@@ -38,7 +38,7 @@ if ($cardio_machine > 0) {
 
     $machine_name_array = mysqli_fetch_array($result);
     echo "<div class='machine'>
-            <p>$machine_name_array[machine_name]</p>
+            <p>Machine name: $machine_name_array[machine_name]</p>
         </div>";
 
 } else {
@@ -55,7 +55,7 @@ if ($cardio_machine > 0) {
 
     $machine_name_array = mysqli_fetch_array($result);
     echo "<div class='machine'>
-    <p>$machine_name_array[machine_name]</p>
+    <p>Machine name: $machine_name_array[machine_name]</p>
 </div>";
 }
 ?>
