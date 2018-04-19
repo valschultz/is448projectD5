@@ -1,10 +1,4 @@
-<?php
-session_start();
-$SESSION['id'] = 'idNum';
-?>
-<!--Author: Valerie Schultz
-	This page is the check for the Registration.html page, so that the correct student id and password are entered, check against the database and confirmed to be correct.
-	-->
+<!--Author: Valerie Schultz	-->
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -18,6 +12,7 @@ $SESSION['id'] = 'idNum';
 				<img src = "images/UMBCretrievers.jpg"  alt = "UMBC retriever" height="100"/>				
 			</p>
 			<?php
+			session_start();
 	#connect to mysql database
 	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","mbrooks3","mbrooks3","mbrooks3");
 
@@ -48,33 +43,27 @@ $SESSION['id'] = 'idNum';
 			print "<p> . $error . </p>";
 			exit;
 		}
-		if($result){
-			$num_rows = mysqli_num_rows($result);
-	
-//todo: if query returned a row, display the temperature and units returned by table
-	if($num_rows != 0)
-		{
-			for($row_num = 0; $row_num < $num_rows; $row_num++)
-			{
-					$row_array = mysqli_fetch_array($result);
-					print("For $id, $password <br /><br /> id is: $row_array[student_id] <br /> password is: $row_array[student_password]
-					<br /> first name is: $row_array[student_first_name]
-					<br /> last name is: $row_array[student_last_name] <br />");
-				}
-	}
-			?>
+		
+		$num_rows = mysqli_num_rows($result);
+		
+		if((!$id=="") && (!$password=="")){
+			if($num_rows==1){
+				$_SESSION['login_user']=$id;
+				header("location: https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php");
+			}
+
+   else{
+   	print("Incorrect id or password, try again!");
+	?>
 			<div class = "center">
 				<p>
-					<a href="https://swe.umbc.edu/~mbrooks3/is448/projectModifed/studenthomepage.php"> Next</a>
+					Click <a href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html"> HERE</a> to go back
 				</p>
 			</div>
 			
 		<?php
-		}
-	//If query returned 0 rows, display error message
-		else{
-			echo "No user matching your query of: student id: $id, password: $password";
-		}
+   }
+ }
 	}
 		else{
 			echo "Invalid student id. Must be 2 letters followed by 5 numbers. <br />";
