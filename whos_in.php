@@ -20,7 +20,7 @@ if ($_SESSION['login_user']) {
 
     <p>
         <a href="https://styleguide.umbc.edu/umbc-athletics-logo/">
-            <img src="images/UMBCretrievers.jpg" alt="UMBC retriever" height="150" />
+            <img src="UMBCretrievers.jpg" alt="UMBC retriever" height="150" />
         </a>
     </p>
 
