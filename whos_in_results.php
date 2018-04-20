@@ -44,6 +44,7 @@
     </div>
 
 <?php
+#checks the session. Will redirect to the login page if there is no session user id.
 session_start();
 if ($_SESSION['login_user']) {
 } else {
