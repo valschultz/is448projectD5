@@ -57,7 +57,7 @@
 		$machine_times = $_POST['machine_times'];
 	
 
-	$checkSchedule_query = "SELECT * FROM Machines WHERE machine_id = '$machine' AND time_block = '$machine_times";
+	$checkSchedule_query = "SELECT * FROM Schedule WHERE machine_id = '$machine' AND time_block = '$machine_times";
 
 	$result = mysqli_query($db, $checkSchedule_query);
 
