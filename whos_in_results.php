@@ -62,8 +62,8 @@ $cardio_machine = htmlspecialchars($_GET['cardio_id']);
 $weight_machine = htmlspecialchars($_GET['weights_id']);
 $cardio_machine = mysqli_real_escape_string($db, $cardio_machine);
 $weight_machine = mysqli_real_escape_string($db, $weight_machine);
-$time = 8; # this is for testing. Can add comment and un comment below to use current hour.
-#$time = date('G'); # Un commenting this will make time be the current time 1-24.
+#$time = 8; # this is for testing. Can add comment and un comment below to use current hour.
+$time = date('G'); # Un commenting this will make time be the current time 1-24.
 
 #this checks to see if the user manually changed a get value. Will need to change these values if we add more machines.
 if ($cardio_machine > 8 || $weight_machine > 4) {
