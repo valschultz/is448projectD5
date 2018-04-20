@@ -92,7 +92,7 @@ if ($_SESSION['login_user']) {
 		
 		<input type="hidden" value="anonymous" name="student_id"> </input>
 		
-		<button type="submit">Make a reservation</submit> </button>
+		<input type="submit" value= "Make a reservation" />
 	</form>
 
 
