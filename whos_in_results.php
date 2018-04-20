@@ -18,7 +18,7 @@
 
 
     <div class="menu">
-        <a class="menu_link" href="https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
+    <a class="menu_link" href="https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
             My Page
         </a>
         <br />
@@ -28,7 +28,7 @@
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule_home.php">
             Today's Schedule
         </a>
         <br />
@@ -38,7 +38,7 @@
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/projectModified/logout.php">
+        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html">
             Log-Out
         </a>
     </div>

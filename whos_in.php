@@ -26,7 +26,7 @@ if ($_SESSION['login_user']) {
 
 
     <div class="menu">
-        <a class="menu_link" href="https://swe.umbc.edu/~mbrooks3/is448/project/studenthomepage.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
             My Page
         </a>
         <br />
@@ -36,7 +36,7 @@ if ($_SESSION['login_user']) {
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule_home.php">
             Today's Schedule
         </a>
         <br />
