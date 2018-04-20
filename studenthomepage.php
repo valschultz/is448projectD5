@@ -1,4 +1,13 @@
-<!--Author: Mary Brooks -->
+!--Author: Mary Brooks -->
+<?php
+#checks the session. Will redirect to the login page if there is no session user id.
+session_start();
+if ($_SESSION['login_user']) {
+} else {
+    header("location: https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +16,12 @@
 </head>
 <body>
 <?php
-//connect and check for error
-$db = mysqli_connect("studentdb-maria.gl.umbc.edu", "mbrooks3", "mbrooks3", "mbrooks3");
-
-if (mysqli_connect_errno()) {
-    exit("Error - could not connect to MySQL");
-}
+	//connect and check for error
+	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","mbrooks3","mbrooks3","mbrooks3");
+	
+	if (mysqli_connect_errno())	{
+		exit("Error - could not connect to MySQL");
+	}
 ?>
 
 <div class = "image">
@@ -41,32 +50,32 @@ if (mysqli_connect_errno()) {
 	Equipment Registration
 	</a>
 	<br /><br />
-	<a class= "menu_link" href = "https://swe.umbc.edu/~schultz4/is448/project/Registration.html" >
+	<a class= "menu_link" href = "https://swe.umbc.edu/~schultz4/is448/projectModified/logout.php" >
 	Log-Out
 	</a>
 </div>
 
 <?php
-//retieve note data from database
-$last5_query = "SELECT * FROM Machines
-		INNER JOIN Student_Machines on Machines.machine_id = Student_Machines.machine_id
+	//retieve note data from database
+	$last5_query = "SELECT * FROM Machines 
+		INNER JOIN Student_Machines on Machines.machine_id = Student_Machines.machine_id 
 		ORDER BY machine_use_id DESC";
-$last5_result = mysqli_query($db, $last5_query);
-if (!$last5_result) {
-    print("Error - query could not be executed");
-    $error = mysqli_error();
-    print "<p> . $error . </p>";
-    exit;
-}
-//display last5
-echo '<div class = "last5">';
-print("<p> Last 5 Machines:</p>");
-$last5_rows = mysqli_num_rows($last5_result);
-for ($row_num = 1; $row_num <= $last5_rows && $row_num <= 5; $row_num++) {
-    $last5_array = mysqli_fetch_array($last5_result);
-
-    print("<p>$row_num: $last5_array[machine_name]<br /></p>");
-}
+	$last5_result = mysqli_query($db,$last5_query);
+	if(! $last5_result){
+		print("Error - query could not be executed");
+		$error = mysqli_error();
+		print "<p> . $error . </p>";
+		exit;
+	}
+	//display last5
+	echo '<div class = "last5">';
+	print ("<p> Last 5 Machines:</p>");
+	$last5_rows = mysqli_num_rows($last5_result);
+	for($row_num = 1; $row_num <= $last5_rows && $row_num <= 5; $row_num++){
+		$last5_array = mysqli_fetch_array($last5_result);
+		
+		print("<p>$row_num: $last5_array[machine_name]<br /></p>");
+	}
 ?>
 		<!-- This clickable will allow the user to view more of their last used machines
 		right now it only links to google -->
@@ -75,7 +84,7 @@ for ($row_num = 1; $row_num <= $last5_rows && $row_num <= 5; $row_num++) {
 		</a>
 
 <?php
-echo '</div>';
+	echo '</div>';
 ?>
 
 <div class = "tips">
@@ -83,44 +92,44 @@ echo '</div>';
 	right now it only displays one pre-set tip -->
 	<h2> <span class = "home_page_headings" > Tips: </span> </h2>
 	<p>
-		It seems you've been using the same machine every time...
+		It seems you've been using the same machine every time... 
 		<br />
 		Try switching it up to exercise different muscles.
 	</p>
 
 	<!-- This section will show the users last 2 or 3 notes that they made about their workout
 	right now it shows only 2 preset notes-->
-</div>
+</div>	
 
 <div class = "notes_top">
 	<h2> <span class = "home_page_headings" > Your Notes: </span> </h2>
 </div>
 <?php
-//retieve note data from database
-$notes_query = "SELECT * FROM Student_Notes ORDER BY note_id DESC";
-$notes_result = mysqli_query($db, $notes_query);
-if (!$notes_result) {
-    print("Error - query could not be executed");
-    $error = mysqli_error();
-    print "<p> . $error . </p>";
-    exit;
-}
-
-//display notes
-$num_rows = mysqli_num_rows($notes_result);
-for ($row_num = 1; $row_num <= $num_rows && $row_num <= 5; $row_num++) {
-    $note_array = mysqli_fetch_array($notes_result);
-    echo '<div class = "notes">';
-    print("<p> $note_array[note_date]: $note_array[note_content] <br /></p>");
-    echo '</div>';
-}
-
+	//retieve note data from database
+	$notes_query = "SELECT * FROM Student_Notes ORDER BY note_id DESC";
+	$notes_result = mysqli_query($db,$notes_query);
+	if(! $notes_result){
+		print("Error - query could not be executed");
+		$error = mysqli_error();
+		print "<p> . $error . </p>";
+		exit;
+	}
+	
+	//display notes
+	$num_rows = mysqli_num_rows($notes_result);
+	for($row_num = 1; $row_num <= $num_rows && $row_num <=5; $row_num++){
+		$note_array = mysqli_fetch_array($notes_result);
+		echo '<div class = "notes">';
+		print ("<p> $note_array[note_date]: $note_array[note_content] <br /></p>");	
+		echo '</div>';
+	}
+	
 ?>
 
 	<!--These clickables will allow the user to create a new note and view more previous notes.
 	Right now, they just link to google. -->
 <div class = "notes">
-	<br />
+	<br /> 
 	<a href="https://swe.umbc.edu/~mbrooks3/is448/project/createnewnote.html">
 	Create a New Note
 	</a>
@@ -131,3 +140,4 @@ for ($row_num = 1; $row_num <= $num_rows && $row_num <= 5; $row_num++) {
 </div>
 </body>
 </html>
+
