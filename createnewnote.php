@@ -47,7 +47,7 @@ if ($_SESSION['login_user']) {
 ?>
 			<div class = "center">
 			<h1> Your note has been saved! </h1>
-			<a href = "https://swe.umbc.edu/~mbrooks3/is448/project/studenthomepage.php">
+			<a href = "https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
 			Return Home
 			</a>
 			</div>
