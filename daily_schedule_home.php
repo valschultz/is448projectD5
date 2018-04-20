@@ -47,7 +47,7 @@ if ($_SESSION['login_user']) {
 
 <form method="POST" action="daily_schedule.php">
 	<p>
-		<h2> Which equipment would you like to use? </h2>
+		<h2> Which equipment would you like to view? </h2>
 	</p>
 
 <select name="machine" size="1">
@@ -66,7 +66,7 @@ if ($_SESSION['login_user']) {
 </select>
 
 	<p>
-		<h2> Please select the time in which you would like to use the machine: </h2>
+		<h2> Please select the time to view its availability: </h2>
 	</p>
 
 <select name="machine_times" size="1">
