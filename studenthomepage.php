@@ -1,4 +1,4 @@
-!--Author: Mary Brooks -->
+<!--Author: Mary Brooks -->
 <?php
 #checks the session. Will redirect to the login page if there is no session user id.
 session_start();
@@ -79,7 +79,7 @@ if ($_SESSION['login_user']) {
 ?>
 		<!-- This clickable will allow the user to view more of their last used machines
 		right now it only links to google -->
-		<a href="https://www.google.com/">
+		<a href="https://swe.umbc.edu/~mbrooks3/is448/project2/seepastmachines.php">
 		See More Past Machines
 		</a>
 
@@ -97,8 +97,6 @@ if ($_SESSION['login_user']) {
 		Try switching it up to exercise different muscles.
 	</p>
 
-	<!-- This section will show the users last 2 or 3 notes that they made about their workout
-	right now it shows only 2 preset notes-->
 </div>	
 
 <div class = "notes_top">
@@ -126,15 +124,13 @@ if ($_SESSION['login_user']) {
 	
 ?>
 
-	<!--These clickables will allow the user to create a new note and view more previous notes.
-	Right now, they just link to google. -->
 <div class = "notes">
 	<br /> 
-	<a href="https://swe.umbc.edu/~mbrooks3/is448/project/createnewnote.html">
+	<a href="https://swe.umbc.edu/~mbrooks3/is448/project2/createnewnote.html">
 	Create a New Note
 	</a>
 	<br />
-	<a  href="https://www.google.com/">
+	<a  href="https://swe.umbc.edu/~mbrooks3/is448/project2/seeallnotes.php">
 	See All Notes
 	</a>
 </div>
