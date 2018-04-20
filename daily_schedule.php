@@ -82,6 +82,8 @@
 		?>
 		<p> Click <a href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule_home.php"> here </a> to go back
 		</p>
+		<p> Click <a href="https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php"> here </a> to reserve it now!
+		</p>
 
 		<?php
 	}
