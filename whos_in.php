@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="EN">
 
+<!--Author: Andrew Peterson	-->
+<?php
+session_start();
+if ($_SESSION['login_user']) {
+    echo ("It works");
+}
+?>
 <head>
     <title>View available machines | Collaborate</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="mockup.css" />
 </head>
+
 <body>
 
     <p>
@@ -21,7 +29,7 @@
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in.php">
             See Who's In
         </a>
         <br />
@@ -41,63 +49,64 @@
         </a>
     </div>
 
-<?php
-$db = mysqli_connect("studentdb-maria.gl.umbc.edu", "mbrooks3", "mbrooks3", "mbrooks3");
 
-#sanity check
-if (mysqli_connect_errno()) {
-    exit("Error - could not connect to MySQL");
-}
+    <div class="whos_in_intro">
+        <h1>Who's in the gym? </h1>
+        <h2>View the available machines below.</h2>
+        <p>
+            Use this page to view open machines and make sure you get a machine next to your friend.
+        </p>
+    </div>
 
-$cardio_machine = htmlspecialchars($_GET['cardio_id']);
-$weight_machine = htmlspecialchars($_GET['weights_id']);
-$cardio_machine = mysqli_real_escape_string($db, $cardio_machine);
-$weight_machine = mysqli_real_escape_string($db, $weight_machine);
+    <div class="whos_in_cardio">
+        <hr />
+        <h2>Cardio Balcony</h2>
+        <!-- The amount of tread mills and ellipticals given to us.-->
+        <a href="whos_in_results.php?cardio_id=1&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=2&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=3&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=4&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=5&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=6&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=7&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=8&weights_id=0">
+            <div class="cardio_recs"></div>
+        </a>
+    </div>
+    <div class="whos_in_weight_room">
+        <br />
+        <hr />
 
-#this checks to see if the user manually changed a get value. Will need to change these values if we add more machines.
-if ($cardio_machine > 8 || $weight_machine > 4) {
-    echo ("Please do not change the get data. Click on the 'See who's in' page to your left and click on one of the machine boxes.");
-    die;
-}
-
-# If true, than that means the machine you clicked on was a cardio machine. It will show relevant info for that machine.
-# If false, it will show relevant information for the weight room machine chosen.
-if ($cardio_machine > 0) {
-    echo "<p>You are viewing the cardio machine #$cardio_machine.</p>\n";
-    $constructed_query = "SELECT * FROM Machines WHERE machine_id = '$cardio_machine';";
-    $result = mysqli_query($db, $constructed_query);
-
-    if (!$result) {
-        print("Error - query could not be executed");
-        $error = mysqli_error($db);
-        print "<p> . $error . </p>";
-        exit;
-    }
-
-    $machine_name_array = mysqli_fetch_array($result);
-    echo "<div class='machine'>
-            <p>Machine name: $machine_name_array[machine_name]</p>
-        </div>";
-
-} else {
-    echo "<p>You are viewing the weight room machine #$weight_machine.</p>\n";
-    $constructed_query = "SELECT * FROM Machines WHERE machine_id = '$weight_machine';";
-    $result = mysqli_query($db, $constructed_query);
-
-    if (!$result) {
-        print("Error - query could not be executed");
-        $error = mysqli_error($db);
-        print "<p> . $error . </p>";
-        exit;
-    }
-
-    $machine_name_array = mysqli_fetch_array($result);
-    echo "<div class='machine'>
-    <p>Machine name: $machine_name_array[machine_name]</p>
-</div>";
-}
-?>
-
-
+        <h2>Weight Room</h2>
+        <!-- The amount of squat racks and bench presses given to us.-->
+        <a href="whos_in_results.php?cardio_id=0&weights_id=9">
+            <div class="weight_room_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=0&weights_id=10">
+            <div class="weight_room_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=0&weights_id=11">
+            <div class="weight_room_recs"></div>
+        </a>
+        <a href="whos_in_results.php?cardio_id=0&weights_id=12">
+            <div class="weight_room_recs"></div>
+        </a>
+    </div>
 
 </body>
+
+</html>
