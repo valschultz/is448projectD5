@@ -28,7 +28,7 @@
 	Today's Schedule
 	</a>
 	<br /><br />
-	<a class= "menu_link" href = "https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html">
+	<a class= "menu_link" href = "https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php">
 	Equipment Registration
 	</a>
 	<br /><br />
@@ -57,13 +57,13 @@
 		$machine_times = $_POST['machine_times'];
 	
 
-	$checkSchedule_query = "SELECT * FROM Machines WHERE machine_id = '$machine'";
+	$checkSchedule_query = "SELECT * FROM Machines WHERE machine_id = '$machine' AND time_block = '$machine_times";
 
 	$result = mysqli_query($db, $checkSchedule_query);
 
 	if(!$result){
 		print("Error, query could not be executed");
-		$error = mysquli_error($db);
+		$error = mysqli_error($db);
 		print "<p> . $error . </p>";
 		exit;
 	}
