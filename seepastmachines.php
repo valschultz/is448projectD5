@@ -42,5 +42,10 @@ if ($_SESSION['login_user']) {
 		print("<p>$row_num: $last5_array[machine_name]<br /></p>");
 	}
 ?>
+	<div class = "center">
+		<a href = "https://swe.umbc.edu/~mbrooks3/is448/project2/studenthomepage.php">
+		Return Home
+		</a>
+	</div>
 </body>
 </html>
