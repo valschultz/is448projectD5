@@ -1,3 +1,5 @@
+<?php
+			session_start();?>
 <!--Author: Valerie Schultz	-->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +14,6 @@
 				<img src = "images/UMBCretrievers.jpg"  alt = "UMBC retriever" height="100"/>				
 			</p>
 			<?php
-			session_start();
 	#connect to mysql database
 	$db = mysqli_connect("studentdb-maria.gl.umbc.edu","mbrooks3","mbrooks3","mbrooks3");
 
@@ -67,6 +68,13 @@
 	}
 		else{
 			echo "Invalid student id. Must be 2 letters followed by 5 numbers. <br />";
+			?>
+				<div class = "center">
+				<p>
+					Click <a href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html"> HERE</a> to go back
+				</p>
+			</div>
+			<?php
 		}
 	}
 	?>
