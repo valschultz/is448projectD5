@@ -8,10 +8,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	</head>
 			<!--Linking this page to the CSS style sheet: mockUp.css-->
-		<link rel="stylesheet" type="text/css" href="mockUp.css" />
+		<link rel="stylesheet" type="text/css" href="mockup.css" />
 		<body>
 			<p>
-				<img src = "images/UMBCretrievers.jpg"  alt = "UMBC retriever" height="100"/>				
+				<img src = "images/UMBCretrievers.jpg"  alt = "UMBC retriever" height="150"/>				
 			</p>
 			<?php
 	#connect to mysql database
