@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<title> Daily Schedule </title>
-	<link rel="stylesheet" type="text/css" href="mockUp.css" />
+	<link rel="stylesheet" type="text/css" href="mockup.css" />
 </head>
 
 <body>
