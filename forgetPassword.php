@@ -66,8 +66,15 @@
 		}
 	}
 		else{
-			echo "Invalid student id. Must be 2 letters followed by 5 numbers. <br />";
-		}
-	?>			
+	?>	
+		<div class = "center">
+				<p>
+					Invalid student id. Must be 2 letters followed by 5 numbers. <br />
+					<a href="https://swe.umbc.edu/~schultz4/is448/projectModified/forgetPassword.html"> Retry</a>
+				</p>
+			</div>
+		<?php
+			}
+	?>
 		</body>
 </html>
