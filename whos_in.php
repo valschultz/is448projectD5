@@ -3,6 +3,7 @@
 
 <!--Author: Andrew Peterson	-->
 <?php
+#checks the session. Will redirect to the login page if there is no session user id.
 session_start();
 if ($_SESSION['login_user']) {
 } else {
@@ -56,6 +57,9 @@ if ($_SESSION['login_user']) {
         <h2>View the available machines below.</h2>
         <p>
             Use this page to view open machines and make sure you get a machine next to your friend.
+        </p>
+        <p>
+        <?php echo "<i>The current time is: </i>" . date("h:i:sa"); ?>
         </p>
     </div>
 
