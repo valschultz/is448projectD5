@@ -38,7 +38,7 @@
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/projectModified/logout.php">
             Log-Out
         </a>
     </div>
