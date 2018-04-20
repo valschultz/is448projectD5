@@ -61,12 +61,8 @@ if ($_SESSION['login_user']) {
 	<option value="8">Elliptical #4</option>
 	<option value="9">Squat Rack #1</option>
 	<option value="10">Squat Rack #2</option>
-	<option value="11">Squat Rack #3</option>
-	<option value="12">Squat Rack #4</option>
-	<option value="13">Bench Press #1</option>
-	<option value="14">Bench Press #2</option>
-	<option value="15">Bench Press #3</option>
-	<option value="16">Bench Press #4</option>
+	<option value="11">Bench Press #1</option>
+	<option value="12">Bench Press #2</option>
 </select>
 
 	<p>
