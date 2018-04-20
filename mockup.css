@@ -1,0 +1,131 @@
+/*all pages*/
+
+body {
+    font-family: 'Georgia', 'Garamond', 'Verdana', sans-serif;
+}
+
+.menu {
+    float: left;
+    margin-right: 40px;
+    background: lightgray;
+}
+
+a.menu_link {
+    color: black;
+}
+
+.image {
+    float: left;
+}
+
+.name {
+    padding: 60px;
+    color: #ed1c24;
+    font-size: 45px;
+}
+
+/*Log-in Page*/
+
+.center {
+    text-align: center;
+}
+
+/*Student Home Page*/
+
+.last5 {
+    float: left;
+    margin-right: 30px;
+}
+
+.tips {
+    float: left;
+}
+
+.notes_top {
+    clear: left;
+    padding-top: 15pt;
+    margin-left: 18%;
+}
+
+.notes {
+    clear: left;
+    margin-left: 18%;
+}
+
+.home_page_headings {
+    font-size: 30px;
+}
+
+/*andrew's use case - see who's in */
+
+.whos_in_intro {
+    text-align: center;
+}
+
+.whos_in_cardio {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    width: 95%;
+    float: left;
+}
+
+.whos_in_weight_room {
+    margin-bottom: 5px;
+    width: 95%;
+    float: left;
+}
+
+.whos_in_cardio .cardio_recs {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 85px;
+    margin: 10px;
+    border: 2px solid black;
+    background: gray;
+}
+
+.whos_in_weight_room .weight_room_recs {
+    display: block;
+    float: left;
+    width: 95px;
+    height: 50px;
+    margin: 10px;
+    border: 2px solid black;
+    background: gray;
+}
+
+.machine {
+    background: lightgray;
+    text-align: center;
+}
+
+/*Daily Schedule Page*/
+
+.equ_center {
+    padding: 60px;
+    font-size: 45px;
+    text-align: center;
+}
+
+/*Shinyoung Caleb Lee's part only*/
+
+.statement {
+    text-align: center;
+}
+
+.times {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+.submit {
+    text-align: center;
+}
+
+.options {
+    text-align: center;
+}
