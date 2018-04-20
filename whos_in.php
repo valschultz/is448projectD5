@@ -62,28 +62,28 @@ if ($_SESSION['login_user']) {
         <hr />
         <h2>Cardio Balcony</h2>
         <!-- The amount of tread mills and ellipticals given to us.-->
-        <a href="whos_in_results.php?cardio_id=1&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=1&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=2&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=2&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=3&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=3&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=4&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=4&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=5&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=5&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=6&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=6&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=7&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=7&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=8&weights_id=0">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=8&weights_id=0">
             <div class="cardio_recs"></div>
         </a>
     </div>
@@ -93,16 +93,16 @@ if ($_SESSION['login_user']) {
 
         <h2>Weight Room</h2>
         <!-- The amount of squat racks and bench presses given to us.-->
-        <a href="whos_in_results.php?cardio_id=0&weights_id=9">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=0&weights_id=9">
             <div class="weight_room_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=0&weights_id=10">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=0&weights_id=10">
             <div class="weight_room_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=0&weights_id=11">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=0&weights_id=11">
             <div class="weight_room_recs"></div>
         </a>
-        <a href="whos_in_results.php?cardio_id=0&weights_id=12">
+        <a href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in_results.php?cardio_id=0&weights_id=12">
             <div class="weight_room_recs"></div>
         </a>
     </div>
