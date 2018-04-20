@@ -45,6 +45,8 @@
 session_start();
 if ($_SESSION['login_user']) {
     echo ("It works");
+} else {
+    header("location: https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html");
 }
 
 $db = mysqli_connect("studentdb-maria.gl.umbc.edu", "mbrooks3", "mbrooks3", "mbrooks3");
