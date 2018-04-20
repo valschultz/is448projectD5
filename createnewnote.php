@@ -1,4 +1,12 @@
 <!--Author: Mary Brooks -->
+<?php
+#checks the session. Will redirect to the login page if there is no session user id.
+session_start();
+if ($_SESSION['login_user']) {
+} else {
+    header("location: https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
