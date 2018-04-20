@@ -8,6 +8,39 @@
 </head>
 <body>
 
+    <p>
+        <a href="https://styleguide.umbc.edu/umbc-athletics-logo/">
+            <img src="images/UMBCretrievers.jpg" alt="UMBC retriever" height="150" />
+        </a>
+    </p>
+
+
+    <div class="menu">
+        <a class="menu_link" href="https://swe.umbc.edu/~mbrooks3/is448/project/studenthomepage.html">
+            My Page
+        </a>
+        <br />
+        <br />
+        <a class="menu_link" href="https://swe.umbc.edu/~andrewp2/is448/projectD5/whos_in.html">
+            See Who's In
+        </a>
+        <br />
+        <br />
+        <a class="menu_link" href="https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule.html">
+            Today's Schedule
+        </a>
+        <br />
+        <br />
+        <a class="menu_link" href="https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html">
+            Equipment Registration
+        </a>
+        <br />
+        <br />
+        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/project/Registration.html">
+            Log-Out
+        </a>
+    </div>
+
 <?php
 $db = mysqli_connect("studentdb-maria.gl.umbc.edu", "mbrooks3", "mbrooks3", "mbrooks3");
 
@@ -21,9 +54,14 @@ $weight_machine = htmlspecialchars($_GET['weights_id']);
 $cardio_machine = mysqli_real_escape_string($db, $cardio_machine);
 $weight_machine = mysqli_real_escape_string($db, $weight_machine);
 
+#this checks to see if the user manually changed a get value. Will need to change these values if we add more machines.
+if ($cardio_machine > 8 || $weight_machine > 4) {
+    echo ("Please do not change the get data. Click on the 'See who's in' page to your left and click on one of the machine boxes.");
+    die;
+}
+
 # If true, than that means the machine you clicked on was a cardio machine. It will show relevant info for that machine.
 # If false, it will show relevant information for the weight room machine chosen.
-
 if ($cardio_machine > 0) {
     echo "<p>You are viewing the cardio machine #$cardio_machine.</p>\n";
     $constructed_query = "SELECT * FROM Machines WHERE machine_id = '$cardio_machine';";
@@ -59,5 +97,7 @@ if ($cardio_machine > 0) {
 </div>";
 }
 ?>
+
+
 
 </body>
