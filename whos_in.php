@@ -6,6 +6,8 @@
 session_start();
 if ($_SESSION['login_user']) {
     echo ("It works");
+} else {
+    header("location: https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html");
 }
 ?>
 <head>
@@ -44,7 +46,7 @@ if ($_SESSION['login_user']) {
         </a>
         <br />
         <br />
-        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/project/Registration.html">
+        <a class="menu_link" href="https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html">
             Log-Out
         </a>
     </div>
