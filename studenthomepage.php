@@ -42,7 +42,7 @@ if ($_SESSION['login_user']) {
 	See Who's In
 	</a>
 	<br /><br />
-	<a class= "menu_link" href = "https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule.html">
+	<a class= "menu_link" href = "https://swe.umbc.edu/~rtsang1/is448/project/daily_schedule_home.php">
 	Today's Schedule
 	</a>
 	<br /><br />
