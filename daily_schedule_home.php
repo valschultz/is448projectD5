@@ -1,7 +1,4 @@
 <!--Author: Raymond Tsang -->
-<!DOCTYPE html>
-<html lang="en">
-
 <?php
 session_start();
 if ($_SESSION['login_user']) {
@@ -9,6 +6,9 @@ if ($_SESSION['login_user']) {
     header("location: https://swe.umbc.edu/~schultz4/is448/projectModified/Registration.html");
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<title> Daily Schedule </title>
 	<link rel="stylesheet" type="text/css" href="mockUp.css" />
