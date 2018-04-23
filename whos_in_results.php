@@ -66,7 +66,7 @@ $weight_machine = mysqli_real_escape_string($db, $weight_machine);
 $time = date('G'); # Un commenting this will make time be the current time 1-24.
 
 #this checks to see if the user manually changed a get value. Will need to change these values if we add more machines.
-if ($cardio_machine > 8 || $weight_machine > 4) {
+if ($cardio_machine > 8 || $weight_machine > 12) {
     echo ("Please do not change the get data. Click on the 'See Who's in' page to your left and click on one of the machine boxes.");
     die;
 }
@@ -177,19 +177,18 @@ if ($cardio_machine > 0) {
         if ($next_time > 12) {
             $next_time = $next_time - 12;
             echo "<div class='machine'>
-            <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html'>Click here to register for this machine right now!</a></p>
+            <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php'>Click here to register for this machine right now!</a></p>
             <p>The machine is available until: $next_time PM</p>
         </div>";
         } else {
             echo "<div class='machine'>
-            <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html'>Click here to register for this machine right now!</a></p>
+            <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php'>Click here to register for this machine right now!</a></p>
             <p>The machine is available until: $next_time AM.</p>
         </div>";
         }
     }
 
 } else {
-    echo "<p>You are viewing the weight room machine #$weight_machine.</p>\n";
     $constructed_query = "SELECT * FROM Machines WHERE machine_id = '$weight_machine';";
     $result = mysqli_query($db, $constructed_query);
 
@@ -293,12 +292,12 @@ if ($cardio_machine > 0) {
         if ($next_time > 12) {
             $next_time = $next_time - 12;
             echo "<div class='machine'>
-           <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html'>Click here to register for this machine right now!</a></p>
+           <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php'>Click here to register for this machine right now!</a></p>
            <p>The machine is available until: $next_time PM</p>
        </div>";
         } else {
             echo "<div class='machine'>
-           <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipmentregistrationpart1.html'>Click here to register for this machine right now!</a></p>
+           <p>There is nobody using this machine right now.<br /> <a href='https://swe.umbc.edu/~ix32419/is448/Project/equipment_reservation.php'>Click here to register for this machine right now!</a></p>
            <p>The machine is available until: $next_time AM.</p>
        </div>";
         }
